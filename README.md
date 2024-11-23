@@ -5,6 +5,7 @@
 Domain yang dipilih untuk proyek machine learning ini adalah Keuangan, dengan judul Predictive Analytics : Predictive Analytics Gold Price
 
 **Latar Belakang**:
+
 Harga emas telah lama menjadi indikator penting dalam ekonomi global, berfungsi sebagai aset pelindung nilai terhadap inflasi, ketidakstabilan ekonomi, dan ketidakpastian pasar. Sebagai salah satu komoditas keras yang paling diminati, emas memiliki fluktuasi harga yang signifikan, dipengaruhi oleh berbagai faktor seperti nilai tukar mata uang, suku bunga, permintaan pasar, dan kondisi geopolitik. Namun, ketidakpastian pergerakan harga emas ini sering kali menjadi tantangan besar bagi investor, perusahaan, dan pemerintah dalam mengambil keputusan strategis terkait investasi dan perdagangan emas. Oleh karena itu, diperlukan solusi yang efektif untuk memprediksi harga emas di masa depan, sehingga dapat membantu mengurangi risiko dan mendukung pengambilan keputusan yang lebih akurat.
 
 Masalah ini menjadi semakin relevan dengan meningkatnya popularitas investasi emas melalui berbagai instrumen modern seperti Exchange-Traded Funds (ETF) Emas dan perdagangan di pasar forex. Dengan risiko tinggi yang melekat pada investasi tersebut, terutama bagi investor individu yang tidak memiliki akses ke analisis data yang komprehensif, predictive analytics berbasis machine learning menjadi pendekatan yang sangat penting. Teknologi ini mampu memanfaatkan data historis untuk mengidentifikasi pola dan tren, sehingga menghasilkan prediksi harga emas yang lebih akurat dan dapat diandalkan. Dengan demikian, predictive analytics tidak hanya membantu investor mengurangi risiko kerugian tetapi juga meningkatkan potensi keuntungan.
@@ -13,9 +14,6 @@ Proyek ini bertujuan untuk membangun model prediksi harga emas menggunakan tekni
 
 ## Business Understanding
 
-Pada bagian ini, kamu perlu menjelaskan proses klarifikasi masalah.
-
-Bagian laporan ini mencakup:
 
 ### Problem Statements
 
@@ -26,7 +24,7 @@ Menjelaskan pernyataan masalah latar belakang:
 
 ### Goals
 
-Menjelaskan tujuan dari pernyataan masalah:
+Tujuan dari proyek ini adalah:
 - Dapat memprediksi harga Emas dengan akurat menggunakan model machine learning.
 - Melakukan analisa dan mengolah data yang optimal agar diterima dengan baik oleh model machine learning.
 - Membandingkan beberapa algoritma model untuk menemukan akurasi terbaik dalam memprediksi kualitas apel.
@@ -34,11 +32,10 @@ Menjelaskan tujuan dari pernyataan masalah:
 Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
 
     ### Solution statements
-   Solusi yang dapat dilakukan agar goals terpenuhi adalah sebagai berikut :
 
 - Melakukan analisa, eksplorasi, pemrosesan pada data dengan memvisualisasikan data agar mendapat gambaran bagaimana data tersebut. Berikut adalah analisa yang dapat dilakukan :
 
-Menangani missing value pada data.
+- Menangani missing value pada data.
   - Mencari korelasi pada data untuk mencari dependant variable dan independent variable.
   - Menangani outlier pada data dengan menggunakan Metode IQR.
   - Melakukan normalisasi pada data terutama pada fitur numerik.
