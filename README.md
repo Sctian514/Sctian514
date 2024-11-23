@@ -130,7 +130,8 @@ Tingkat kesulitan yang tinggi dalam pemilihan model
 Untuk proyek kali ini kita akan menggunakan model K-Nearest Neighbors karena memiliki error (0.00001) yang paling sedikit daripada model yang lain. Namun tidak bisa dipungkiri model dari Gradient Boosting juga memiliki error (0.000011) yang hampir seperti KNN.
 ## Evaluation
 Untuk evaluasi pada machine learning model ini, metrik yang digunakan adalah mean squared error (mse). Dimana metrik ini mengukur seberapa dekat garis pas dengan titik data.
-![alt text]({906E1FDB-E5EB-4994-A791-BF4C2D3B0672}.png)
+![Cuplikan layar_20241123_192853](https://github.com/user-attachments/assets/d35bf8c5-3213-43e7-9b8a-d58a8ea3a85f)
+
 
 dimana : n = jumlah titik data Yi = nilai sesungguhnya Yi_hat = nilai prediksi
 
