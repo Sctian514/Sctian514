@@ -172,7 +172,7 @@ Menampilkan hasil akurasi dari beberapa model yang dipakai :
 ![{FB26EE9D-15BD-431B-8C7C-ECAE05F4DE8A}](https://github.com/user-attachments/assets/8c49208b-cfd9-4e1d-8ed1-283cc4f247e0)
 
 
-Untuk proyek kali ini terdapat model yang dapat berjalan dengan performa optimal yaitu K-Nearest Neighbors.
+Untuk proyek kali ini terdapat model yang dapat berjalan dengan performa optimal yaitu K-Nearest Neighbor.
 
 
 ## Refrensi
