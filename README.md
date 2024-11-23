@@ -136,6 +136,7 @@ Untuk evaluasi pada machine learning model ini, metrik yang digunakan adalah mea
 dimana : n = jumlah titik data Yi = nilai sesungguhnya Yi_hat = nilai prediksi
 
 Menampilkan hasil akurasi dari beberapa model yang dipakai :
+![Cuplikan layar_20241123_194737](https://github.com/user-attachments/assets/28a6afa6-d394-44b2-931c-405faf5c7a21)
 
 
 Untuk proyek kali ini terdapat 2 model yang dapat berjalan dengan performa optimal yaitu, Gradient Boosting model dan K-Nearest Neighbors. Terdapat selisih nilai yang sangat kecil. Tetapi pada perhitungan akurasi model terdapat model yang menggunakan K-Nearest Neighbors memiliki nilai lebih tinggi.
