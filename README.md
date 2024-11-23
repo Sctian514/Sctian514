@@ -49,15 +49,18 @@ Tujuan dari proyek ini adalah:
 
 ## Data Understanding
 Dataset yang digunakan pada proyek ini adalah dataset dari Kaggle yang berjudul Gold Price | 10 Years | 2013-2023
+
 [https://www.kaggle.com/datasets/farzadnekouei/gold-price-10-years-20132023]
+
 Dataset yang digunakan memiliki format .csv yang mempunyai total 2583 data dengan 7 kolom (Date,Price, Open, High, Low, Vol, Change %)
 
-Date  : Tanggal pencatatan Data
-Price : Harga emas
-Open  : Harga buka dihitung perhari
-High  : Harga tertinggi perhari
-Low   : Harga terendah perhari
-Vol   : Volume transaksi
+- Date    : Tanggal pencatatan Data
+- Price   : Harga emas
+- Open    : Harga buka dihitung perhari
+- High    : Harga tertinggi perhari
+- Low     : Harga terendah perhari
+- Vol     : Volume transaksi
+- Change% : Persentase perubahan harga emas
 
 **Data visualiation**
 
@@ -155,6 +158,8 @@ Untuk proyek kali ini kita akan menggunakan model K-Nearest Neighbors karena mem
 ## Evaluation
 
 Untuk evaluasi pada machine learning model ini, metrik yang digunakan adalah mean squared error (mse). Dimana metrik ini mengukur seberapa dekat garis pas dengan titik data.
+
+
 ![Cuplikan layar_20241123_192853](https://github.com/user-attachments/assets/d35bf8c5-3213-43e7-9b8a-d58a8ea3a85f)
 
 
@@ -168,7 +173,7 @@ Menampilkan hasil akurasi dari beberapa model yang dipakai :
 Untuk proyek kali ini terdapat 2 model yang dapat berjalan dengan performa optimal yaitu, Gradient Boosting model dan K-Nearest Neighbors. Terdapat selisih nilai yang sangat kecil. Tetapi pada perhitungan akurasi model terdapat model yang menggunakan K-Nearest Neighbors memiliki nilai lebih tinggi.
 
 
-**---Refrensi---**
+## Refrensi
 
 - Foreign Exchange turnover in April 2019. The Bank for International Settlements. (2019, September 16). Retrieved August 20, 2022, from https://www.bis.org/statistics/rpfx19_fx.htm
 - Subramanian, D. (2019). A Simple Introduction to K-Nearest Neighbors Algorithm. Towards Data Science.
