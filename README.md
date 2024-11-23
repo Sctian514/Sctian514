@@ -65,13 +65,19 @@ High  : Harga tertinggi perhari
 Low   : Harga terendah perhari
 Vol   : Volume transaksi
 
-### Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
-- accepts : merupakan jenis pembayaran yang diterima pada restoran tertentu.
-- cuisine : merupakan jenis masakan yang disajikan pada restoran.
-- dst
+Data visualiation
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
+![{62BCD9C3-EB07-455D-A97D-BFD8A34E876B}](https://github.com/user-attachments/assets/c0a83c33-b115-4cb2-8b64-7f3da09cc14c)
+
+Univariate Analysis
+
+![{0A645AD3-7D18-4508-8358-90720D2171B4}](https://github.com/user-attachments/assets/24604d2b-f41f-42da-aa54-b4c39c6b22d1)
+
+Multivariate Analysis
+
+![{0BCA7EEF-0C52-4956-AC1E-F6FECF23EFC5}](https://github.com/user-attachments/assets/1f409fb1-276f-43fe-87d9-2d0dd2d0cbdf)
+![{D3E5AF2B-38CE-46D6-AFBC-C329E6E3A687}](https://github.com/user-attachments/assets/406029ff-6616-47b6-9a2e-3088c1fb5322)
+
 
 ## Data Preparation
 Berikut ini merupakan tahapan-tahapan dalam melakukan pra-pemrosesan data:
