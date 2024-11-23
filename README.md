@@ -17,7 +17,7 @@ Proyek ini bertujuan untuk membangun model prediksi harga emas menggunakan tekni
 
 ### Problem Statements
 
-Menjelaskan pernyataan masalah latar belakang:
+Berdasarkan latar belakang di atas, berikut ini merupakan rincian masalah yang dapat diselesaikan pada proyek ini:
 - Bagaimana menganalisa data harga Emas?
 - Bagaimana cara mengolah data agar di latih dengan baik oleh model?
 - Model yang seperti apa yang memiliki akurasi paling baik?
@@ -29,7 +29,6 @@ Tujuan dari proyek ini adalah:
 - Melakukan analisa dan mengolah data yang optimal agar diterima dengan baik oleh model machine learning.
 - Membandingkan beberapa algoritma model untuk menemukan akurasi terbaik dalam memprediksi kualitas apel.
 
-Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
 
     ### Solution statements
 
@@ -40,11 +39,12 @@ Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pe
   - Menangani outlier pada data dengan menggunakan Metode IQR.
   - Melakukan normalisasi pada data terutama pada fitur numerik.
   - Membuat model regresi untuk memprediksi bilangan kontinu untuk memprediksi harga yang akan datang.
-  - Berikut beberapa algoritma yang digunakan pada proyek ini :
 
-- Support Vector Machine (Support Vector Regression)
+ Berikut beberapa algoritma yang digunakan pada proyek ini :
+  - Support Vector Machine (Support Vector Regression)
   - K-Nearest Neighbors
   - Boosting Algorithm (Gradient Boosting Regression)
+    
 - Melakukan hyperparameter tuning agar model dapat berjalan pada performa terbaik dengan menggunakan teknik Grid Search
 
 ## Data Understanding
@@ -77,21 +77,27 @@ Vol   : Volume transaksi
 Berikut ini merupakan tahapan-tahapan dalam melakukan pra-pemrosesan data:
 
 **Melakukan Penanganan Missing Value**
+
 Pada kasus ini dalam menangani Missing Value menggunakan library SimpleImputer, yang dimana library ini bertugas untuk mengisi kolom yang memiliki missing value dengan data mean (nilai rata-rata)
 
 **Melakukan pembagian dataset**
+
 Kita akan membagi dataset menjadi 2 yaitu sebagai train data dan test data. Train data digunakan sebagai training model dan test data digunakan sebagai validasi apakah model sudah akurat atau belum. Ratio yang umum dalam splitting dataset adalah 80:20, 80% sebagai train data dan 20% sebagai test data, sehingga kita akan menggunakan Ratio tersebut. Pembagian dataset dilakukan dengan modul train_test_split dari scikit-learn. Setelah melakukan pembagian dataset, didapatkan jumlah sample pada data latih yaitu 2066 sampel dan jumlah sample pada data test yaitu 517 sampel dari total jumlah sample pada dataset yaitu 2583 sampel.
 
 **Menghapus fitur yang tidak diperlukan**
+
 Karena kita tidak memerlukan fitur Date,Vol, dan Change%. kita akan menghapus fitur Date, Vol, dan Change%. 
 
 **Data Normalization**
+
 Normalisasi data digunakan agar model dapat bekerja lebih optimal karena model tidak perlu mengolah data dengan angka besar. Normalisasi biasanya mentransformasi data dalam skala tertentu. Untuk proyek ini kita akan normalisasi data 0 hingga 1 menggunakan MinMaxScaler.
 
 ## Modeling
+
 Model yang akan digunakan proyek kali ini yaitu Support Vector Regression, Gradient Boosting, dan K-Nearest Neighbors.
 
 **Support Vector Regression**
+
 Support Vector Regression memiliki prinsip yang sama dengan SVM, namun SVM biasa digunakan dalam klasifikasi. Pada SVM, algoritma tersebut berusaha mencari jalan terbesar yang bisa memisahkan sampel dari kelas berbeda, sedangkan SVR mencari jalan yang dapat menampung sebanyak mungkin sampel di jalan. Untuk hyper parameter yang digunakan pada model ini adalah sebagai berikut :
 
 - kernel : Hyperparameter ini digunakan untuk menghitung kernel matriks sebelumnya.
@@ -99,27 +105,33 @@ Support Vector Regression memiliki prinsip yang sama dengan SVM, namun SVM biasa
 - gamma : Hyperparameter ini digunakan untk menetukan seberapa jauh pengaruh satu contoh pelatihan mencapai, dengan nilai rendah berarti jauh dan nilai tinggi berarti dekat.
 
 **Kelebihan**
+
 - Lebih efektif pada data dimensi tinggi (data dengan jumlah fitur yang banyak)
 - Memori lebih efisien karena menggunakan subset poin pelatihan
 
 **Kekurangan**
+
 -Sulit dipakai pada data skala besar
 
 **K-Nearest Neighbors**
+
 K-Nearest Neighbors merupakan algoritma machine learning yang bekerja dengan mengklasifikasikan data baru menggunakan kemiripan antara data baru dengan sejumlah data (k) pada data yang telah ada. Algoritma ini dapat digunakan untuk klasifikasi dan regresi. Untuk hyperparameter yang digunakan pada model ini hanya 1 yaitu :
 
 - n_neighbors : Jumlah tetangga untuk yang diperlukan untuk menentukan letak data baru
 
 **Kelebihan**
+
 - Dapat menerima data yang masih noisy
 - Sangat efektif apabila jumlah datanya banyak
 - Mudah diimplementasikan
 
 **Kekurangan**
+
 - Sensitif pada outlier
 - Rentan pada fitur yang kurang informatif
 
 **Gradient Boosting**
+
 Gradient Boosting adalah algoritma machine learning yang menggunakan teknik ensembel learning dari decision tree untuk memprediksi nilai. Gradient Boosting sangat mampu menangani pattern yang kompleks dan data ketika linear model tidak dapat menangani. Untuk hyperparameter yang digunakan pada model ini ada 3 yaitu :
 
 - learning_rate : Hyperparameter training yang digunakan untuk menghitung nilai koreksi bobot padad waktu proses training. Umumnya nilai learning rate berkisar antara 0 hingga 1
@@ -127,11 +139,13 @@ Gradient Boosting adalah algoritma machine learning yang menggunakan teknik ense
 - criterion : Hyperparameter yang digunakan untuk menemukan fitur dan ambang batas optimal dalam membagi data
 
 **Kelebihan**
+
 - Hasil pemodelan yang lebih akurat
 - Model yang stabil dan lebih kuat (robust)
 - Dapat digunakan untuk menangkap hubungan linear maupun non linear pada data
 
 **Kekurangan**
+
 - Pengurangan kemampuan interpretasi model
 - Waktu komputasi dan desain tinggi
 - Tingkat kesulitan yang tinggi dalam pemilihan model
@@ -139,6 +153,7 @@ Gradient Boosting adalah algoritma machine learning yang menggunakan teknik ense
 Untuk proyek kali ini kita akan menggunakan model K-Nearest Neighbors karena memiliki error (0.00001) yang paling sedikit daripada model yang lain. Namun tidak bisa dipungkiri model dari Gradient Boosting juga -memiliki error (0.000011) yang hampir seperti KNN.
 
 ## Evaluation
+
 Untuk evaluasi pada machine learning model ini, metrik yang digunakan adalah mean squared error (mse). Dimana metrik ini mengukur seberapa dekat garis pas dengan titik data.
 ![Cuplikan layar_20241123_192853](https://github.com/user-attachments/assets/d35bf8c5-3213-43e7-9b8a-d58a8ea3a85f)
 
