@@ -45,7 +45,8 @@ Solusi yang dapat dilakukan agar goals terpenuhi adalah sebagai berikut :
   - Support Vector Machine (Support Vector Regression)
   - K-Nearest Neighbors
   - Boosting Algorithm (Gradient Boosting Regression)
-    
+
+
 - Melakukan hyperparameter tuning agar model dapat berjalan pada performa terbaik dengan menggunakan teknik Grid Search
 
 ## Data Understanding
@@ -171,7 +172,7 @@ Menampilkan hasil akurasi dari beberapa model yang dipakai :
 ![{FB26EE9D-15BD-431B-8C7C-ECAE05F4DE8A}](https://github.com/user-attachments/assets/8c49208b-cfd9-4e1d-8ed1-283cc4f247e0)
 
 
-Untuk proyek kali ini terdapat 2 model yang dapat berjalan dengan performa optimal yaitu, Gradient Boosting model dan K-Nearest Neighbors. Terdapat selisih nilai yang sangat kecil. Tetapi pada perhitungan akurasi model terdapat model yang menggunakan K-Nearest Neighbors memiliki nilai lebih tinggi.
+Untuk proyek kali ini terdapat model yang dapat berjalan dengan performa optimal yaitu K-Nearest Neighbors.
 
 
 ## Refrensi
