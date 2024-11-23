@@ -41,7 +41,7 @@ Solusi yang dapat dilakukan agar goals terpenuhi adalah sebagai berikut :
   - Melakukan normalisasi pada data terutama pada fitur numerik.
 
 
- Berikut beberapa algoritma yang digunakan pada proyek ini :
+- Berikut beberapa algoritma yang digunakan pada proyek ini :
   - Support Vector Machine (Support Vector Regression)
   - K-Nearest Neighbors
   - Boosting Algorithm (Gradient Boosting Regression)
