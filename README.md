@@ -39,7 +39,7 @@ Solusi yang dapat dilakukan agar goals terpenuhi adalah sebagai berikut :
   - Mencari korelasi pada data untuk mencari dependant variable dan independent variable.
   - Menangani outlier pada data dengan menggunakan Metode IQR.
   - Melakukan normalisasi pada data terutama pada fitur numerik.
-  - Membuat model regresi untuk memprediksi bilangan kontinu untuk memprediksi harga yang akan datang.
+
 
  Berikut beberapa algoritma yang digunakan pada proyek ini :
   - Support Vector Machine (Support Vector Regression)
