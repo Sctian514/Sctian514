@@ -27,12 +27,13 @@ Berdasarkan latar belakang di atas, berikut ini merupakan rincian masalah yang d
 Tujuan dari proyek ini adalah:
 - Dapat memprediksi harga Emas dengan akurat menggunakan model machine learning.
 - Melakukan analisa dan mengolah data yang optimal agar diterima dengan baik oleh model machine learning.
-- Membandingkan beberapa algoritma model untuk menemukan akurasi terbaik dalam memprediksi kualitas apel.
+- Membandingkan beberapa algoritma model untuk menemukan akurasi terbaik.
 
 
     ### Solution statements
 
-- Melakukan analisa, eksplorasi, pemrosesan pada data dengan memvisualisasikan data agar mendapat gambaran bagaimana data tersebut. Berikut adalah analisa yang dapat dilakukan :
+Solusi yang dapat dilakukan agar goals terpenuhi adalah sebagai berikut :
+
 
 - Menangani missing value pada data.
   - Mencari korelasi pada data untuk mencari dependant variable dan independent variable.
