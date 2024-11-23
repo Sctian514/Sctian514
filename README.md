@@ -4,7 +4,7 @@
 
 Domain yang dipilih untuk proyek machine learning ini adalah Keuangan, dengan judul Predictive Analytics : Predictive Analytics Gold Price
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
+**Latar Belakang**:
 Harga emas telah lama menjadi indikator penting dalam ekonomi global, berfungsi sebagai aset pelindung nilai terhadap inflasi, ketidakstabilan ekonomi, dan ketidakpastian pasar. Sebagai salah satu komoditas keras yang paling diminati, emas memiliki fluktuasi harga yang signifikan, dipengaruhi oleh berbagai faktor seperti nilai tukar mata uang, suku bunga, permintaan pasar, dan kondisi geopolitik. Namun, ketidakpastian pergerakan harga emas ini sering kali menjadi tantangan besar bagi investor, perusahaan, dan pemerintah dalam mengambil keputusan strategis terkait investasi dan perdagangan emas. Oleh karena itu, diperlukan solusi yang efektif untuk memprediksi harga emas di masa depan, sehingga dapat membantu mengurangi risiko dan mendukung pengambilan keputusan yang lebih akurat.
 
 Masalah ini menjadi semakin relevan dengan meningkatnya popularitas investasi emas melalui berbagai instrumen modern seperti Exchange-Traded Funds (ETF) Emas dan perdagangan di pasar forex. Dengan risiko tinggi yang melekat pada investasi tersebut, terutama bagi investor individu yang tidak memiliki akses ke analisis data yang komprehensif, predictive analytics berbasis machine learning menjadi pendekatan yang sangat penting. Teknologi ini mampu memanfaatkan data historis untuk mengidentifikasi pola dan tren, sehingga menghasilkan prediksi harga emas yang lebih akurat dan dapat diandalkan. Dengan demikian, predictive analytics tidak hanya membantu investor mengurangi risiko kerugian tetapi juga meningkatkan potensi keuntungan.
@@ -33,9 +33,6 @@ Menjelaskan tujuan dari pernyataan masalah:
 
 Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Menambahkan bagian “Solution Statement” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut: 
-
     ### Solution statements
    Solusi yang dapat dilakukan agar goals terpenuhi adalah sebagai berikut :
 
@@ -55,7 +52,7 @@ Menangani missing value pada data.
 
 ## Data Understanding
 Dataset yang digunakan pada proyek ini adalah dataset dari Kaggle yang berjudul Gold Price | 10 Years | 2013-2023
- [https://www.kaggle.com/datasets/farzadnekouei/gold-price-10-years-20132023]
+[https://www.kaggle.com/datasets/farzadnekouei/gold-price-10-years-20132023]
 Dataset yang digunakan memiliki format .csv yang mempunyai total 2583 data dengan 7 kolom (Date,Price, Open, High, Low, Vol, Change %)
 
 Date  : Tanggal pencatatan Data
@@ -65,15 +62,15 @@ High  : Harga tertinggi perhari
 Low   : Harga terendah perhari
 Vol   : Volume transaksi
 
-Data visualiation
+**Data visualiation**
 
 ![{62BCD9C3-EB07-455D-A97D-BFD8A34E876B}](https://github.com/user-attachments/assets/c0a83c33-b115-4cb2-8b64-7f3da09cc14c)
 
-Univariate Analysis
+**Univariate Analysis**
 
 ![{0A645AD3-7D18-4508-8358-90720D2171B4}](https://github.com/user-attachments/assets/24604d2b-f41f-42da-aa54-b4c39c6b22d1)
 
-Multivariate Analysis
+**Multivariate Analysis**
 
 ![{0BCA7EEF-0C52-4956-AC1E-F6FECF23EFC5}](https://github.com/user-attachments/assets/1f409fb1-276f-43fe-87d9-2d0dd2d0cbdf)
 ![{D3E5AF2B-38CE-46D6-AFBC-C329E6E3A687}](https://github.com/user-attachments/assets/406029ff-6616-47b6-9a2e-3088c1fb5322)
@@ -82,58 +79,68 @@ Multivariate Analysis
 ## Data Preparation
 Berikut ini merupakan tahapan-tahapan dalam melakukan pra-pemrosesan data:
 
-Melakukan Penanganan Missing Value
+**Melakukan Penanganan Missing Value**
 Pada kasus ini dalam menangani Missing Value menggunakan library SimpleImputer, yang dimana library ini bertugas untuk mengisi kolom yang memiliki missing value dengan data mean (nilai rata-rata)
 
-Melakukan pembagian dataset
-Kita akan membagi dataset menjadi 2 yaitu sebagai train data dan test data. Train data digunakan sebagai training model dan test data digunakan sebagai validasi apakah model sudah akurat atau belum. Ratio yang umum dalam splitting dataset adalah 80:20, 80% sebagai train data dan 20% sebagai test data, sehingga kita akan menggunakan Ratio tersebut. Pembagian dataset dilakukan dengan modul train_test_split dari scikit-learn. Setelah melakukan pembagian dataset, didapatkan jumlah sample pada data latih yaitu 3640 sampel dan jumlah sample pada data test yaitu 910 sampel dari total jumlah sample pada dataset yaitu 4550 sampel.
+**Melakukan pembagian dataset**
+Kita akan membagi dataset menjadi 2 yaitu sebagai train data dan test data. Train data digunakan sebagai training model dan test data digunakan sebagai validasi apakah model sudah akurat atau belum. Ratio yang umum dalam splitting dataset adalah 80:20, 80% sebagai train data dan 20% sebagai test data, sehingga kita akan menggunakan Ratio tersebut. Pembagian dataset dilakukan dengan modul train_test_split dari scikit-learn. Setelah melakukan pembagian dataset, didapatkan jumlah sample pada data latih yaitu 2066 sampel dan jumlah sample pada data test yaitu 517 sampel dari total jumlah sample pada dataset yaitu 2583 sampel.
 
-Menghapus fitur yang tidak diperlukan
-Karena kita tidak memerlukan fitur Date dan Volume kita akan menghapus fitur Date dan Volume. Juga kita tidak memerlukan fitur Close karena Adj Close lebih akurat dari pada Close sehingga kita menghapus fitur Close.
+**Menghapus fitur yang tidak diperlukan**
+Karena kita tidak memerlukan fitur Date,Vol, dan Change%. kita akan menghapus fitur Date, Vol, dan Change%. 
 
-Data Normalization
+**Data Normalization**
 Normalisasi data digunakan agar model dapat bekerja lebih optimal karena model tidak perlu mengolah data dengan angka besar. Normalisasi biasanya mentransformasi data dalam skala tertentu. Untuk proyek ini kita akan normalisasi data 0 hingga 1 menggunakan MinMaxScaler.
 
 ## Modeling
 Model yang akan digunakan proyek kali ini yaitu Support Vector Regression, Gradient Boosting, dan K-Nearest Neighbors.
 
-Support Vector Regression
+**Support Vector Regression**
 Support Vector Regression memiliki prinsip yang sama dengan SVM, namun SVM biasa digunakan dalam klasifikasi. Pada SVM, algoritma tersebut berusaha mencari jalan terbesar yang bisa memisahkan sampel dari kelas berbeda, sedangkan SVR mencari jalan yang dapat menampung sebanyak mungkin sampel di jalan. Untuk hyper parameter yang digunakan pada model ini adalah sebagai berikut :
 
-kernel : Hyperparameter ini digunakan untuk menghitung kernel matriks sebelumnya.
-C : Hyperparameter ini adalah parameter regularisasi digunakan untuk menukar klasifikasi yang benar dari contoh training terhadap maksimalisasi margin fungsi keputusan.
-gamma : Hyperparameter ini digunakan untk menetukan seberapa jauh pengaruh satu contoh pelatihan mencapai, dengan nilai rendah berarti jauh dan nilai tinggi berarti dekat.
-Kelebihan
-Lebih efektif pada data dimensi tinggi (data dengan jumlah fitur yang banyak)
-Memori lebih efisien karena menggunakan subset poin pelatihan
-Kekurangan
-Sulit dipakai pada data skala besar
-K-Nearest Neighbors
+- kernel : Hyperparameter ini digunakan untuk menghitung kernel matriks sebelumnya.
+- C : Hyperparameter ini adalah parameter regularisasi digunakan untuk menukar klasifikasi yang benar dari contoh training terhadap maksimalisasi margin fungsi keputusan.
+- gamma : Hyperparameter ini digunakan untk menetukan seberapa jauh pengaruh satu contoh pelatihan mencapai, dengan nilai rendah berarti jauh dan nilai tinggi berarti dekat.
+
+**Kelebihan**
+- Lebih efektif pada data dimensi tinggi (data dengan jumlah fitur yang banyak)
+- Memori lebih efisien karena menggunakan subset poin pelatihan
+
+**Kekurangan**
+-Sulit dipakai pada data skala besar
+
+**K-Nearest Neighbors**
 K-Nearest Neighbors merupakan algoritma machine learning yang bekerja dengan mengklasifikasikan data baru menggunakan kemiripan antara data baru dengan sejumlah data (k) pada data yang telah ada. Algoritma ini dapat digunakan untuk klasifikasi dan regresi. Untuk hyperparameter yang digunakan pada model ini hanya 1 yaitu :
 
-n_neighbors : Jumlah tetangga untuk yang diperlukan untuk menentukan letak data baru
-Kelebihan
-Dapat menerima data yang masih noisy
-Sangat efektif apabila jumlah datanya banyak
-Mudah diimplementasikan
-Kekurangan
-Sensitif pada outlier
-Rentan pada fitur yang kurang informatif
-Gradient Boosting
+- n_neighbors : Jumlah tetangga untuk yang diperlukan untuk menentukan letak data baru
+
+**Kelebihan**
+- Dapat menerima data yang masih noisy
+- Sangat efektif apabila jumlah datanya banyak
+- Mudah diimplementasikan
+
+**Kekurangan**
+- Sensitif pada outlier
+- Rentan pada fitur yang kurang informatif
+
+**Gradient Boosting**
 Gradient Boosting adalah algoritma machine learning yang menggunakan teknik ensembel learning dari decision tree untuk memprediksi nilai. Gradient Boosting sangat mampu menangani pattern yang kompleks dan data ketika linear model tidak dapat menangani. Untuk hyperparameter yang digunakan pada model ini ada 3 yaitu :
 
-learning_rate : Hyperparameter training yang digunakan untuk menghitung nilai koreksi bobot padad waktu proses training. Umumnya nilai learning rate berkisar antara 0 hingga 1
-n_estimators : Jumlah tahapan boosting yang akan dilakukan.
-criterion : Hyperparameter yang digunakan untuk menemukan fitur dan ambang batas optimal dalam membagi data
-Kelebihan
-Hasil pemodelan yang lebih akurat
-Model yang stabil dan lebih kuat (robust)
-Dapat digunakan untuk menangkap hubungan linear maupun non linear pada data
-Kekurangan
-Pengurangan kemampuan interpretasi model
-Waktu komputasi dan desain tinggi
-Tingkat kesulitan yang tinggi dalam pemilihan model
-Untuk proyek kali ini kita akan menggunakan model K-Nearest Neighbors karena memiliki error (0.00001) yang paling sedikit daripada model yang lain. Namun tidak bisa dipungkiri model dari Gradient Boosting juga memiliki error (0.000011) yang hampir seperti KNN.
+- learning_rate : Hyperparameter training yang digunakan untuk menghitung nilai koreksi bobot padad waktu proses training. Umumnya nilai learning rate berkisar antara 0 hingga 1
+- n_estimators : Jumlah tahapan boosting yang akan dilakukan.
+- criterion : Hyperparameter yang digunakan untuk menemukan fitur dan ambang batas optimal dalam membagi data
+
+**Kelebihan**
+- Hasil pemodelan yang lebih akurat
+- Model yang stabil dan lebih kuat (robust)
+- Dapat digunakan untuk menangkap hubungan linear maupun non linear pada data
+
+**Kekurangan**
+- Pengurangan kemampuan interpretasi model
+- Waktu komputasi dan desain tinggi
+- Tingkat kesulitan yang tinggi dalam pemilihan model
+
+Untuk proyek kali ini kita akan menggunakan model K-Nearest Neighbors karena memiliki error (0.00001) yang paling sedikit daripada model yang lain. Namun tidak bisa dipungkiri model dari Gradient Boosting juga -memiliki error (0.000011) yang hampir seperti KNN.
+
 ## Evaluation
 Untuk evaluasi pada machine learning model ini, metrik yang digunakan adalah mean squared error (mse). Dimana metrik ini mengukur seberapa dekat garis pas dengan titik data.
 ![Cuplikan layar_20241123_192853](https://github.com/user-attachments/assets/d35bf8c5-3213-43e7-9b8a-d58a8ea3a85f)
@@ -149,9 +156,12 @@ Menampilkan hasil akurasi dari beberapa model yang dipakai :
 Untuk proyek kali ini terdapat 2 model yang dapat berjalan dengan performa optimal yaitu, Gradient Boosting model dan K-Nearest Neighbors. Terdapat selisih nilai yang sangat kecil. Tetapi pada perhitungan akurasi model terdapat model yang menggunakan K-Nearest Neighbors memiliki nilai lebih tinggi.
 
 
-**---Ini adalah bagian akhir laporan---**
+**---Refrensi---**
 
-_Catatan:_
-- _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
-- Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
+- Foreign Exchange turnover in April 2019. The Bank for International Settlements. (2019, September 16). Retrieved August 20, 2022, from https://www.bis.org/statistics/rpfx19_fx.htm
+- Subramanian, D. (2019). A Simple Introduction to K-Nearest Neighbors Algorithm. Towards Data Science.
+  https://towardsdatascience.com/a-simple-introduction-to-k-nearest-neighbors-algorithm-b3519ed98e
+- Wood, T. -.What is a Random Forest?. DeepAI. https://deepai.org/machine-learning-glossary-and-terms/random-forest
+- Gandhi, R. (2018). Support Vector Machine — Introduction to Machine Learning Algorithms: SVM model from scratch. Towards Data Science. https://towardsdatascience.com/support-vector-machine-introduction-to- 
+  machine-learning-algorithms-934a444fca47
 
