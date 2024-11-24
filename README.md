@@ -174,13 +174,3 @@ Menampilkan hasil akurasi dari beberapa model yang dipakai :
 
 Untuk proyek kali ini terdapat model yang dapat berjalan dengan performa optimal yaitu K-Nearest Neighbor.
 
-
-## Refrensi
-
-- Foreign Exchange turnover in April 2019. The Bank for International Settlements. (2019, September 16). Retrieved August 20, 2022, from https://www.bis.org/statistics/rpfx19_fx.htm
-- Subramanian, D. (2019). A Simple Introduction to K-Nearest Neighbors Algorithm. Towards Data Science.
-  https://towardsdatascience.com/a-simple-introduction-to-k-nearest-neighbors-algorithm-b3519ed98e
-- Wood, T. -.What is a Random Forest?. DeepAI. https://deepai.org/machine-learning-glossary-and-terms/random-forest
-- Gandhi, R. (2018). Support Vector Machine — Introduction to Machine Learning Algorithms: SVM model from scratch. Towards Data Science. https://towardsdatascience.com/support-vector-machine-introduction-to- 
-  machine-learning-algorithms-934a444fca47
-
