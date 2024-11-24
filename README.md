@@ -168,8 +168,9 @@ Untuk evaluasi pada machine learning model ini, metrik yang digunakan adalah mea
 dimana : n = jumlah titik data Yi = nilai sesungguhnya Yi_hat = nilai prediksi
 
 Menampilkan hasil akurasi dari beberapa model yang dipakai :
-![Cuplikan layar_20241123_194737](https://github.com/user-attachments/assets/28a6afa6-d394-44b2-931c-405faf5c7a21)
-![{FB26EE9D-15BD-431B-8C7C-ECAE05F4DE8A}](https://github.com/user-attachments/assets/8c49208b-cfd9-4e1d-8ed1-283cc4f247e0)
+![{0A53B03E-94EB-4899-A268-AEDAA7DF71C8}](https://github.com/user-attachments/assets/789bf038-49ca-4803-92eb-bbdf3e8359b2)
+
+![{979ACD69-47F9-4EB7-B532-08335B1DBE03}](https://github.com/user-attachments/assets/39dcd474-933f-43d5-8caf-3a0a7bef8342)
 
 
 Untuk proyek kali ini terdapat model yang dapat berjalan dengan performa optimal yaitu K-Nearest Neighbor.
