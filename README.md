@@ -64,7 +64,10 @@ Dataset yang digunakan memiliki format .csv yang mempunyai total 2583 data denga
 - Vol     : Volume transaksi
 - Change% : Persentase perubahan harga emas
 
-**Data visualiation**
+## Exploratory Data Analysis
+Sebelum melakukan pemrosesan data, kita harus mengetahui keadaan data. seperti mencari korelasi antar fitur, mencari outlier, melakukan analisis univariate dan multivariate.
+
+**Mencari outlier**
 
 ![{62BCD9C3-EB07-455D-A97D-BFD8A34E876B}](https://github.com/user-attachments/assets/c0a83c33-b115-4cb2-8b64-7f3da09cc14c)
 
