@@ -78,9 +78,11 @@ Sebelum melakukan pemrosesan data, kita harus mengetahui keadaan data. seperti m
 **Multivariate Analysis**
 
 ![{0BCA7EEF-0C52-4956-AC1E-F6FECF23EFC5}](https://github.com/user-attachments/assets/1f409fb1-276f-43fe-87d9-2d0dd2d0cbdf)
+
 Selanjutnya kita akan menganalisis korelasi fitur Price terhadap fitur lain seperti Open, High, dan Low. Dapat disimpulkan bahwa Price memiliki korelasi positif yang kuat terhadap Open, High, dan Low.
 
 ![{D3E5AF2B-38CE-46D6-AFBC-C329E6E3A687}](https://github.com/user-attachments/assets/406029ff-6616-47b6-9a2e-3088c1fb5322)
+
 Untuk memperjelas korelasi kita akan memvisualisasikannya menggunakan heatmap dari library Seaborn. Dapat kita lihat bahwa Price memiliki korelasi positif tinggi pada setiap fitur.
 
 
