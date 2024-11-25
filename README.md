@@ -75,6 +75,8 @@ Sebelum melakukan pemrosesan data, kita harus mengetahui keadaan data. seperti m
 
 ![{0A645AD3-7D18-4508-8358-90720D2171B4}](https://github.com/user-attachments/assets/24604d2b-f41f-42da-aa54-b4c39c6b22d1)
 
+Pada kasus ini kita hanya akan berfokus dalam memprediksi *Price*.
+
 **Multivariate Analysis**
 
 ![{0BCA7EEF-0C52-4956-AC1E-F6FECF23EFC5}](https://github.com/user-attachments/assets/1f409fb1-276f-43fe-87d9-2d0dd2d0cbdf)
