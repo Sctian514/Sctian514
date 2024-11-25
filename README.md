@@ -71,6 +71,8 @@ Sebelum melakukan pemrosesan data, kita harus mengetahui keadaan data. seperti m
 
 ![{62BCD9C3-EB07-455D-A97D-BFD8A34E876B}](https://github.com/user-attachments/assets/c0a83c33-b115-4cb2-8b64-7f3da09cc14c)
 
+Jika data numerik divisualisasikan tidak ditemukan outlier.
+
 **Univariate Analysis**
 
 ![{0A645AD3-7D18-4508-8358-90720D2171B4}](https://github.com/user-attachments/assets/24604d2b-f41f-42da-aa54-b4c39c6b22d1)
