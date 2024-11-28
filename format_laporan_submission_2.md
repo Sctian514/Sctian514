@@ -10,15 +10,11 @@ Model rekomendasi film berbasis machine learning telah menjadi pusat perhatian d
 
 ## Business Understanding
 
-Pada bagian ini, Anda perlu menjelaskan proses klarifikasi masalah.
-
-Bagian laporan ini mencakup:
-
 ### Problem Statements
 
 Berdasarkan latar belakang di atas, rincian masalahnya adalah sebagai berikut:
--Model Machine Learning apa yang cocok untuk menyelesaikan permasalahan tersebut?
--Bagaimana cara menentukan hasil rekomendasi suatu model Machine Learning dapat dikatakan baik?
+- Model Machine Learning apa yang cocok untuk menyelesaikan permasalahan tersebut?
+- Bagaimana cara menentukan hasil rekomendasi suatu model Machine Learning dapat dikatakan baik?
 
 
 ### Goals
@@ -31,7 +27,7 @@ Berdasarkan  pertanyaan di atas, maka tujuannya sebagai berikut:
 ## Data Understanding
 Dataset yang digunakan pada proyek ini adalah dataset dari Kaggle yang berjudul Movie Recommender System Dataset
 
- [[[UCI Machine Learning Repository](https://www.kaggle.com/datasets/gargmanas/movierecommenderdataset?select=ratings.csv)](https://www.kaggle.com/datasets/sayan0211/movie-recomendation-pjct?select=movies.csv)]
+ [(https://www.kaggle.com/datasets/sayan0211/movie-recomendation-pjct?select=movies.csv)]
 
 Dataset yang digunakan memiliki format .csv yang mempunyai total 9741 data dengan 3 kolom (movieId, title, genres)
 
@@ -60,7 +56,7 @@ Proses ini dilakukan dengan menggunakan fungsi tolist() agar data lebih mudah di
 ## Modeling
 Setelah data selesai disiapkan, proses selanjutnya adalah membuat model adapun tahap-tahapnya diantaranya sebagai berikut:
 
-=Melakukan Vektorisasi dengan TF-IDF
+= Melakukan Vektorisasi dengan TF-IDF
 Pada tahap ini data yang telah disiapkan dikonversi menjadi bentuk vektor menggunakan fungsi tfidfvectorizer() dari library sklearn untuk mengidentifikasi korelasi antara judul film dengan kategori genrenya.
 
 - Mengukur tingkat kesamaan dengan Cosine Similarity
