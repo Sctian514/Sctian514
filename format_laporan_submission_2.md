@@ -14,7 +14,6 @@ Model rekomendasi film berbasis machine learning telah menjadi pusat perhatian d
 
 Berdasarkan latar belakang di atas, rincian masalahnya adalah sebagai berikut:
 - Bagaimana cara melakukan pra-pemrosesan pada data movie recomendation yang akan digunakan agar dapat membuat model yang baik menggunakan teknik content-base filtering?
-- Bagaimana cara menentukan hasil rekomendasi suatu model Machine Learning dapat dikatakan baik?
 - Bagaimana memberikan rekomendasi judul film berdasarkan genre pada setiap judul film yang pelanggan input sehingga dapat memberikan preferensi yang sesuai pelanggan inginkan?
 
 ### Goals
