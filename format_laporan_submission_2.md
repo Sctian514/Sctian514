@@ -1,14 +1,12 @@
-# Laporan Proyek Machine Learning - Nama Anda
+# Laporan Proyek Machine Learning - Samuel Cristian Saragih
 
 ## Project Overview
 
-Pada bagian ini, Kamu perlu menuliskan latar belakang yang relevan dengan proyek yang diangkat.
+Industri hiburan, khususnya perfilman, mengalami pertumbuhan yang pesat dalam beberapa tahun terakhir, dengan begitu banyaknya pilihan film yang tersedia di berbagai platform streaming. Di tengah banyaknya pilihan yang ada, seringkali pengguna kesulitan menemukan film yang sesuai dengan selera mereka. Untuk itu, sistem rekomendasi film menjadi salah satu solusi untuk membantu pengguna menemukan film yang relevan dengan preferensi pribadi mereka. Sistem rekomendasi berbasis konten dan kolaboratif kini banyak digunakan oleh berbagai platform streaming seperti Netflix, Hulu, dan Disney+ untuk memberikan pengalaman pengguna yang lebih personal dan relevan.
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Jelaskan mengapa proyek ini penting untuk diselesaikan.
-- Menyertakan hasil riset terkait atau referensi. Referensi yang diberikan harus berasal dari sumber yang kredibel dan author yang jelas.
-  
-  Format Referensi: [Judul Referensi](https://scholar.google.com/) 
+Model rekomendasi film berbasis machine learning telah menjadi pusat perhatian dalam penelitian dan aplikasi teknologi kecerdasan buatan (AI). Dengan memanfaatkan data historis pengguna, genre film, serta preferensi yang terungkap dari interaksi sebelumnya, sistem ini dapat mengidentifikasi pola-pola tertentu yang dapat digunakan untuk merekomendasikan film-film yang sesuai. Teknik-teknik seperti Collaborative Filtering dan Content-Based Filtering telah banyak diterapkan untuk membangun sistem rekomendasi yang efektif. Oleh karena itu, penting bagi para pengembang dan peneliti untuk terus meningkatkan akurasi dan relevansi dari rekomendasi yang diberikan melalui penerapan model machine learning yang lebih canggih, yang dapat lebih memahami kebutuhan dan selera pengguna.
+
+ 
 
 ## Business Understanding
 
@@ -18,19 +16,18 @@ Bagian laporan ini mencakup:
 
 ### Problem Statements
 
-Menjelaskan pernyataan masalah:
-- Pernyataan Masalah 1
-- Pernyataan Masalah 2
-- Pernyataan Masalah n
+Berdasarkan latar belakang di atas, rincian masalahnya adalah sebagai berikut:
+-Model Machine Learning apa yang cocok untuk menyelesaikan permasalahan tersebut?
+-Bagaimana cara menentukan hasil rekomendasi suatu model Machine Learning dapat dikatakan baik?
+
 
 ### Goals
 
-Menjelaskan tujuan proyek yang menjawab pernyataan masalah:
-- Jawaban pernyataan masalah 1
-- Jawaban pernyataan masalah 2
-- Jawaban pernyataan masalah n
+Berdasarkan  pertanyaan di atas, maka tujuannya sebagai berikut:
 
-Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
+- Model yang cocok untuk menyelesaikan masalah tersebut adalah model yang berbasis dengan konten atau biasa disebut Content-Based Filtering. Melakukan evaluasi terhadap metrik dari model Machine Learning tersebut.
+- Menjelaskan tujuan proyek yang menjawab pernyataan masalah:
+
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Menambahkan bagian “Solution Approach” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut: 
