@@ -30,9 +30,9 @@ Dataset yang digunakan pada proyek ini adalah dataset dari Kaggle yang berjudul 
  [(https://www.kaggle.com/datasets/sayan0211/movie-recomendation-pjct?select=movies.csv)]
 
 Dataset yang digunakan memiliki format .csv yang mempunyai total 9741 data dengan 3 kolom (movieId, title, genres)
-= movieId : id movie.
-= title   : judul movie.
-= genre   : genre movie
+- movieId : id movie.
+- title   : judul movie.
+- genre   : genre movie
 
 
 ## Exploratory Data Analysis 
@@ -67,10 +67,10 @@ Setelah data dikonversi menjadi bentuk vektor, selanjutnya ukur tingkat kesamaan
 
 Model yang akan digunakan proyek kali ini yaitu content-based filtering.
 
-**content-based filtering**
+- **content-based filtering**
 Model content-based filtering ini bekerja dengan mempelajari profil minat pengguna baru berdasarkan data dari objek yang telah dinilai pengguna. Metode ini bekerja dengan menyarankan item serupa yang pernah disukai sebelumnya atau sedang dilihat sekarang kepada pengguna berdasrakan kategori tertentu dari item yang dinilai oleh pengguna dengan menggunakan similarity tertentu.
 
-**Hasil**
+- **Hasil**
 Setelah model selesai dibuat, panggil model untuk menampilkan hasil rekomendasi, sebagai contoh kita gunakan judul film Precious (2009) untuk menguji model.
 ![{8DA54029-13CA-4891-A121-24AA18C9F83C}](https://github.com/user-attachments/assets/0d429a97-7bd5-4bbf-908b-ed5ca24f0f4f)
 
