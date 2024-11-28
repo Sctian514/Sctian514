@@ -13,16 +13,16 @@ Model rekomendasi film berbasis machine learning telah menjadi pusat perhatian d
 ### Problem Statements
 
 Berdasarkan latar belakang di atas, rincian masalahnya adalah sebagai berikut:
-- Model Machine Learning apa yang cocok untuk menyelesaikan permasalahan tersebut?
+- Bagaimana cara melakukan pra-pemrosesan pada data movie recomendation yang akan digunakan agar dapat membuat model yang baik menggunakan teknik content-base filtering?
 - Bagaimana cara menentukan hasil rekomendasi suatu model Machine Learning dapat dikatakan baik?
-
+- Bagaimana memberikan rekomendasi judul film berdasarkan genre pada setiap judul film yang pelanggan input sehingga dapat memberikan preferensi yang sesuai pelanggan inginkan?
 
 ### Goals
 
 Berdasarkan  pertanyaan di atas, maka tujuannya sebagai berikut:
 
-- Model yang cocok untuk menyelesaikan masalah tersebut adalah model yang berbasis dengan konten atau biasa disebut Content-Based Filtering. Melakukan evaluasi terhadap metrik dari model Machine Learning tersebut.
-- Melakukan evaluasi terhadap metrik dari model Machine Learning tersebut.
+- Melakukan pra-pemrosesan dengan baik agar dapat digunakan dalam pembuatan model.
+- Membuat sistem rekomendasi judul film berdasarkan genre yang dibuat.
 
 ## Data Understanding
 Dataset yang digunakan pada proyek ini adalah dataset dari Kaggle yang berjudul Movie Recommender System Dataset
@@ -35,7 +35,13 @@ Dataset yang digunakan memiliki format .csv yang mempunyai total 9741 data denga
 - genre   : genre movie
 
 
-## Exploratory Data Analysis 
+**Exploratory Data Analysis**
+
+**Mengecek missing value**
+
+![{D51BADF3-CF87-4A80-B93A-E8FCA1C7D7BA}](https://github.com/user-attachments/assets/8a25dd34-35a1-4d80-81d8-cff43a64a265)
+
+dari gambar di atas tidak missing value.
 
 **Univariate Analysis**
 
@@ -52,12 +58,35 @@ Proses ini dilakukan dengan menggunakan fungsi drop_duplicates() agar tidak ada 
 - Mengonversi Data Series Menjadi Bentuk List
 Proses ini dilakukan dengan menggunakan fungsi tolist() agar data lebih mudah diproses pada tahap pemodelan.
 
+Teknik yang digunakan pada tahapan Proses Data adalah vektorisasi fungsi CountVectorizer dari library scikit-learn. CountVectorizer digunakan untuk mengubah teks yang diberikan menjadi vektor berdasarkan frekuensi (jumlah) setiap kata yang muncul di seluruh teks. CountVectorizer membuat matriks di mana setiap kata unik diwakili oleh kolom matriks, dan setiap sampel teks dari dokumen adalah baris dalam matriks. Nilai setiap sel tidak lain adalah jumlah kata dalam sampel teks tertentu.Pada proses vektorisasi ini, digunakan metode sebagai berikut.
+
+- fit metode berfungsi untuk melakukan perhitungan idf pada data
+- get_feature_names_out() berfungsi untuk melakukan mapping array dari fitur index integer ke fitur nama
+
+  ![{49528DE3-C0F5-40C1-BD11-55209D5FA4D8}](https://github.com/user-attachments/assets/1a467abe-d2ec-4c81-ba35-0b026691f52e)
+
+- fit_transform() berfungsi untuk mempelajari kosa kata dan Inverse Document Frequency (IDF) dengan memberikan nilai return berupa document-term matrix
+
+  ![{3AFCA78E-9E87-404F-BADA-78F5CBA26F86}](https://github.com/user-attachments/assets/08d6ac4e-7bf6-446e-a888-df19f768ae5f)
+
+- todense() berfungsi untuk mengubah vektor tf-idf dalam bentuk matriks
+
+  ![{68346F9A-572E-4663-87A7-F5D2FE190487}](https://github.com/user-attachments/assets/2c2069a0-645a-4a1f-bf0b-3d45dac8a663)
+
+
 ## Modeling
 Setelah data selesai disiapkan, proses selanjutnya adalah membuat model adapun tahap-tahapnya diantaranya sebagai berikut:
 - Melakukan Vektorisasi dengan TF-IDF.
 Pada tahap ini data yang telah disiapkan dikonversi menjadi bentuk vektor menggunakan fungsi tfidfvectorizer() dari library sklearn untuk mengidentifikasi korelasi antara judul film dengan kategori genrenya.
 - Mengukur tingkat kesamaan dengan Cosine Similarity.
-Setelah data dikonversi menjadi bentuk vektor, selanjutnya ukur tingkat kesamaan antara dua vektor dan menentukan apakah kedua vektor tersebut menunjuk ke arah yang sama. Semakin kecil sudut cosinus, semakin besar nilai cosine similarity.
+Setelah data dikonversi menjadi bentuk vektor, selanjutnya ukur tingkat kesamaan antara dua vektor dan menentukan apakah kedua vektor tersebut menunjuk ke arah yang sama. Semakin kecil sudut cosinus, semakin besar nilai cosine similarity.Berikut cara melatih model dengan menggunakan consine similarity yg dapat dilihat pada gambar dibawah brikut ini:
+
+  ![{25441324-E679-427B-AF7F-620B776519A0}](https://github.com/user-attachments/assets/a3805843-0b13-40f3-9e30-d0aa702b1197)
+
+- Pada tahapan ini menampilkan matriks kesamaan setiap judul dengan menampilkan judul film dalam 5 sampel kolom (axis = 1) dan 10 sampel baris (axis=0).
+
+  ![{49957BF5-8014-40CE-A308-6FF2836EE1DD}](https://github.com/user-attachments/assets/27cc9c3b-f7d4-4ab0-a825-c41cc8345f04)
+
 - Membuat Fungsi movie_recommendations(). Tahap terakhir dari proses modeling adalah membuat fungsi untuk mendapatkan hasil top-N recommendation, kali ini fungsinya dinamakan movie_recommendations(). Cara kerja dari fungsi ini yaitu menggunakan fungsi argpartition untuk mengambil sejumlah nilai k tertinggi dari similarity data (dalam kasus ini: dataframe cosine_sim_df). Kemudian mengambil data dari bobot (tingkat kesamaan) tertinggi ke terendah. Data ini lalu dimasukkan ke dalam variabel closest. Berikutnya menghapus movie_title yang dicari menggunakan fungsi drop() agar tidak muncul dalam daftar rekomendasi. Penjelasan parameter dari fungsi movie_recommendations() adalah sebagai berikut:
 
   - movie_title : Judul film (index kemiripan dataframe) (str)
@@ -65,12 +94,8 @@ Setelah data dikonversi menjadi bentuk vektor, selanjutnya ukur tingkat kesamaan
   - items : Mengandung kedua nama dan fitur lainnya yang digunakan untuk mendefinisikan kemiripan (object)
   - k : Banyaknya jumlah rekomendasi yang diberikan (int)
 
-Model yang akan digunakan proyek kali ini yaitu content-based filtering.
 
-- **content-based filtering**
-Model content-based filtering ini bekerja dengan mempelajari profil minat pengguna baru berdasarkan data dari objek yang telah dinilai pengguna. Metode ini bekerja dengan menyarankan item serupa yang pernah disukai sebelumnya atau sedang dilihat sekarang kepada pengguna berdasrakan kategori tertentu dari item yang dinilai oleh pengguna dengan menggunakan similarity tertentu.
-
-- **Hasil**
+## Results
 Setelah model selesai dibuat, panggil model untuk menampilkan hasil rekomendasi, sebagai contoh kita gunakan judul film Precious (2009) untuk menguji model.
 
 ![{8DA54029-13CA-4891-A121-24AA18C9F83C}](https://github.com/user-attachments/assets/0d429a97-7bd5-4bbf-908b-ed5ca24f0f4f)
