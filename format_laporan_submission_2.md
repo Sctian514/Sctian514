@@ -72,6 +72,7 @@ Model content-based filtering ini bekerja dengan mempelajari profil minat penggu
 
 - **Hasil**
 Setelah model selesai dibuat, panggil model untuk menampilkan hasil rekomendasi, sebagai contoh kita gunakan judul film Precious (2009) untuk menguji model.
+
 ![{8DA54029-13CA-4891-A121-24AA18C9F83C}](https://github.com/user-attachments/assets/0d429a97-7bd5-4bbf-908b-ed5ca24f0f4f)
 
 Dapat dilihat  bahwa film Precious (2009) merupakan film dengan genre drama. Selanjutnya kita lihat rekomendasi film yang sesuai dengan genre yang sama dengan film tersebut.
