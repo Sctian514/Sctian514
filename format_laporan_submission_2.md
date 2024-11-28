@@ -54,11 +54,11 @@ Proses ini dilakukan dengan menggunakan fungsi tolist() agar data lebih mudah di
 
 ## Modeling
 Setelah data selesai disiapkan, proses selanjutnya adalah membuat model adapun tahap-tahapnya diantaranya sebagai berikut:
-= Melakukan Vektorisasi dengan TF-IDF
+- Melakukan Vektorisasi dengan TF-IDF.
 Pada tahap ini data yang telah disiapkan dikonversi menjadi bentuk vektor menggunakan fungsi tfidfvectorizer() dari library sklearn untuk mengidentifikasi korelasi antara judul film dengan kategori genrenya.
-- Mengukur tingkat kesamaan dengan Cosine Similarity
+- Mengukur tingkat kesamaan dengan Cosine Similarity.
 Setelah data dikonversi menjadi bentuk vektor, selanjutnya ukur tingkat kesamaan antara dua vektor dan menentukan apakah kedua vektor tersebut menunjuk ke arah yang sama. Semakin kecil sudut cosinus, semakin besar nilai cosine similarity.
-- Membuat Fungsi movie_recommendations() Tahap terakhir dari proses modeling adalah membuat fungsi untuk mendapatkan hasil top-N recommendation, kali ini fungsinya dinamakan movie_recommendations(). Cara kerja dari fungsi ini yaitu menggunakan fungsi argpartition untuk mengambil sejumlah nilai k tertinggi dari similarity data (dalam kasus ini: dataframe cosine_sim_df). Kemudian mengambil data dari bobot (tingkat kesamaan) tertinggi ke terendah. Data ini lalu dimasukkan ke dalam variabel closest. Berikutnya menghapus movie_title yang dicari menggunakan fungsi drop() agar tidak muncul dalam daftar rekomendasi. Penjelasan parameter dari fungsi movie_recommendations() adalah sebagai berikut:
+- Membuat Fungsi movie_recommendations(). Tahap terakhir dari proses modeling adalah membuat fungsi untuk mendapatkan hasil top-N recommendation, kali ini fungsinya dinamakan movie_recommendations(). Cara kerja dari fungsi ini yaitu menggunakan fungsi argpartition untuk mengambil sejumlah nilai k tertinggi dari similarity data (dalam kasus ini: dataframe cosine_sim_df). Kemudian mengambil data dari bobot (tingkat kesamaan) tertinggi ke terendah. Data ini lalu dimasukkan ke dalam variabel closest. Berikutnya menghapus movie_title yang dicari menggunakan fungsi drop() agar tidak muncul dalam daftar rekomendasi. Penjelasan parameter dari fungsi movie_recommendations() adalah sebagai berikut:
 
   - movie_title : Judul film (index kemiripan dataframe) (str)
   - similarity_data : Kesamaan dataframe simetrik dengan judul film sebagai indeks dan kolom (object)
