@@ -30,7 +30,6 @@ Dataset yang digunakan pada proyek ini adalah dataset dari Kaggle yang berjudul 
  [(https://www.kaggle.com/datasets/sayan0211/movie-recomendation-pjct?select=movies.csv)]
 
 Dataset yang digunakan memiliki format .csv yang mempunyai total 9741 data dengan 3 kolom (movieId, title, genres)
-
 = movieId : id movie.
 = title   : judul movie.
 = genre   : genre movie
@@ -55,13 +54,10 @@ Proses ini dilakukan dengan menggunakan fungsi tolist() agar data lebih mudah di
 
 ## Modeling
 Setelah data selesai disiapkan, proses selanjutnya adalah membuat model adapun tahap-tahapnya diantaranya sebagai berikut:
-
 = Melakukan Vektorisasi dengan TF-IDF
 Pada tahap ini data yang telah disiapkan dikonversi menjadi bentuk vektor menggunakan fungsi tfidfvectorizer() dari library sklearn untuk mengidentifikasi korelasi antara judul film dengan kategori genrenya.
-
 - Mengukur tingkat kesamaan dengan Cosine Similarity
 Setelah data dikonversi menjadi bentuk vektor, selanjutnya ukur tingkat kesamaan antara dua vektor dan menentukan apakah kedua vektor tersebut menunjuk ke arah yang sama. Semakin kecil sudut cosinus, semakin besar nilai cosine similarity.
-
 - Membuat Fungsi movie_recommendations() Tahap terakhir dari proses modeling adalah membuat fungsi untuk mendapatkan hasil top-N recommendation, kali ini fungsinya dinamakan movie_recommendations(). Cara kerja dari fungsi ini yaitu menggunakan fungsi argpartition untuk mengambil sejumlah nilai k tertinggi dari similarity data (dalam kasus ini: dataframe cosine_sim_df). Kemudian mengambil data dari bobot (tingkat kesamaan) tertinggi ke terendah. Data ini lalu dimasukkan ke dalam variabel closest. Berikutnya menghapus movie_title yang dicari menggunakan fungsi drop() agar tidak muncul dalam daftar rekomendasi. Penjelasan parameter dari fungsi movie_recommendations() adalah sebagai berikut:
 
   - movie_title : Judul film (index kemiripan dataframe) (str)
@@ -71,10 +67,10 @@ Setelah data dikonversi menjadi bentuk vektor, selanjutnya ukur tingkat kesamaan
 
 Model yang akan digunakan proyek kali ini yaitu content-based filtering.
 
-## content-based filtering.
+**content-based filtering**
 Model content-based filtering ini bekerja dengan mempelajari profil minat pengguna baru berdasarkan data dari objek yang telah dinilai pengguna. Metode ini bekerja dengan menyarankan item serupa yang pernah disukai sebelumnya atau sedang dilihat sekarang kepada pengguna berdasrakan kategori tertentu dari item yang dinilai oleh pengguna dengan menggunakan similarity tertentu.
 
-## Hasil
+**Hasil**
 Setelah model selesai dibuat, panggil model untuk menampilkan hasil rekomendasi, sebagai contoh kita gunakan judul film Precious (2009) untuk menguji model.
 ![{8DA54029-13CA-4891-A121-24AA18C9F83C}](https://github.com/user-attachments/assets/0d429a97-7bd5-4bbf-908b-ed5ca24f0f4f)
 
@@ -93,7 +89,7 @@ Karena model yang digunakan untuk proyek kali ini adalah Content-Based Filtering
 
 Berdasarkan hasil rekomendasi dapat disimpulkan bahwa dari 10 judul film yang direkomendasikan, ada 10 film yang relevan oleh karena itu nilai Precision dari model ini adalah 10/10 atau 100%.
 
-**---Kesimpulan---**
+**Kesimpulan**
 
 Setelah melalui proses yang panjang, mulai dari mempersiapkan dataset hingga melakukan evaluasi, akhirnya sistem rekomendasi dengan pendekatan Machine Learning Content-Based Filtering pun selesai dirancang dan hasilnya pun cukup memuaskan yaitu dari 10 judul film yang direkomendasikan, terdapat 10 film yang relevan dengan judul film yang diuji yang menandakan precision dari model ini adalah 100%.
 
