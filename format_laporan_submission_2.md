@@ -4,9 +4,8 @@
 
 Industri hiburan, khususnya perfilman, mengalami pertumbuhan yang pesat dalam beberapa tahun terakhir, dengan begitu banyaknya pilihan film yang tersedia di berbagai platform streaming. Di tengah banyaknya pilihan yang ada, seringkali pengguna kesulitan menemukan film yang sesuai dengan selera mereka. Untuk itu, sistem rekomendasi film menjadi salah satu solusi untuk membantu pengguna menemukan film yang relevan dengan preferensi pribadi mereka. Sistem rekomendasi berbasis konten dan kolaboratif kini banyak digunakan oleh berbagai platform streaming seperti Netflix, Hulu, dan Disney+ untuk memberikan pengalaman pengguna yang lebih personal dan relevan.
 
-Model rekomendasi film berbasis machine learning telah menjadi pusat perhatian dalam penelitian dan aplikasi teknologi kecerdasan buatan (AI). Dengan memanfaatkan data historis pengguna, genre film, serta preferensi yang terungkap dari interaksi sebelumnya, sistem ini dapat mengidentifikasi pola-pola tertentu yang dapat digunakan untuk merekomendasikan film-film yang sesuai. Teknik-teknik seperti Collaborative Filtering dan Content-Based Filtering telah banyak diterapkan untuk membangun sistem rekomendasi yang efektif. Oleh karena itu, penting bagi para pengembang dan peneliti untuk terus meningkatkan akurasi dan relevansi dari rekomendasi yang diberikan melalui penerapan model machine learning yang lebih canggih, yang dapat lebih memahami kebutuhan dan selera pengguna.
+Model rekomendasi film berbasis machine learning telah menjadi pusat perhatian dalam penelitian dan aplikasi teknologi kecerdasan buatan (AI). Dengan memanfaatkan data historis pengguna, genre film, serta preferensi yang terungkap dari interaksi sebelumnya, sistem ini dapat mengidentifikasi pola-pola tertentu yang dapat digunakan untuk merekomendasikan film-film yang sesuai. Teknik-teknik seperti Collaborative Filtering dan Content-Based Filtering telah banyak diterapkan untukmembangun sistem rekomendasi yang efektif. Oleh sebab itu, dibuat sistem rekomendasi yang dapat membantu pengguna dan dapat dengan mudah mendapatkan rekomendasi film berdasarkan genre dari judul film yang dicari atau yang telah diinput sebelumnya. Metode untuk sistem rekomendasi judul film berdasarkan genre ini menggunakan teknik content-based filtering.
 
- 
 
 ## Business Understanding
 
@@ -20,8 +19,8 @@ Berdasarkan latar belakang di atas, rincian masalahnya adalah sebagai berikut:
 
 Berdasarkan  pertanyaan di atas, maka tujuannya sebagai berikut:
 
-- Sistem rekomendasi yang baik akan membuat pengguna kembali lebih sering, meningkatkan retensi.
-- Menyediakan rekomendasi film yang lebih akurat dan sesuai dengan genre yang disukai pengguna.
+- Membangun sistem rekomendasi berbasis content-based filtering yang dapat memberikan rekomendasi film yang lebih akurat dan relevan dengan preferensi pengguna.
+- Membuat pengguna lebih mudah menemukan judul film yang tepat dengan bantuan sistem rekomendasi judul film berdasarkan genre yang dibuat.
 
 ## Data Understanding
 Dataset yang digunakan pada proyek ini adalah dataset dari Kaggle yang berjudul Movie Recommender System Dataset
