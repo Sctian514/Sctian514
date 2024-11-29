@@ -20,8 +20,8 @@ Berdasarkan latar belakang di atas, rincian masalahnya adalah sebagai berikut:
 
 Berdasarkan  pertanyaan di atas, maka tujuannya sebagai berikut:
 
-- Melakukan pra-pemrosesan dengan baik agar dapat digunakan dalam pembuatan model.
-- Membuat sistem rekomendasi judul film berdasarkan genre yang dibuat.
+- Sistem rekomendasi yang baik akan membuat pengguna kembali lebih sering, meningkatkan retensi.
+- Menyediakan rekomendasi film yang lebih akurat dan sesuai dengan genre yang disukai pengguna.
 
 ## Data Understanding
 Dataset yang digunakan pada proyek ini adalah dataset dari Kaggle yang berjudul Movie Recommender System Dataset
@@ -75,8 +75,6 @@ Teknik yang digunakan pada tahapan Proses Data adalah vektorisasi fungsi CountVe
 
 ## Modeling
 Setelah data selesai disiapkan, proses selanjutnya adalah membuat model adapun tahap-tahapnya diantaranya sebagai berikut:
-- Melakukan Vektorisasi dengan TF-IDF.
-Pada tahap ini data yang telah disiapkan dikonversi menjadi bentuk vektor menggunakan fungsi tfidfvectorizer() dari library sklearn untuk mengidentifikasi korelasi antara judul film dengan kategori genrenya.
 - Mengukur tingkat kesamaan dengan Cosine Similarity.
 Setelah data dikonversi menjadi bentuk vektor, selanjutnya ukur tingkat kesamaan antara dua vektor dan menentukan apakah kedua vektor tersebut menunjuk ke arah yang sama. Semakin kecil sudut cosinus, semakin besar nilai cosine similarity.Berikut cara melatih model dengan menggunakan consine similarity yg dapat dilihat pada gambar dibawah brikut ini:
 
